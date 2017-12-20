@@ -20,90 +20,102 @@
     <div class="container">
       <h3>Google Search History</h3>
       <p class="flow-text grey-text">Download your google search history in a variety of (raw) popular formats like: txt, csv and json.<br>
-        Visit, <a href="https://developer.chrome.com/extensions/history">developer.chrome.com</a>, for more information.
+        Visit <a href="https://github.com/DanielRanLehmann/google-search-history">repo's page</a> for more information.
       </p>
 
-      <!-- <p class="flow-text">Query</p> -->
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="query-text" type="text">
-          <label class="active" for="query-text">text</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <!-- Start time -->
-        <div class="input-field col s6">
-          <input id="query-start-time"  type="text" class="datepicker">
-          <label class="active" for="query-start-time">startTime (optional)</label>
-        </div>
-        <!-- End time -->
-        <div class="input-field col s6">
-          <input id="query-end-time"  type="text" class="datepicker">
-          <label class="active" for="query-end-time">endTime (optional)</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="query-max-results" type="number">
-          <label class="active" for="query-max-results">maxResults (optional)</label>
-        </div>
-      </div>
-
-
-      <form action="#">
-        <!-- All -->
-        <p>
-          <input type="checkbox" class="filled-in" id="page-attr-all"/>
-          <label for="page-attr-all">Page Attributes</label>
-        </p>
-
+      <div class="section">
+        <h5>Query</h5>
         <div class="divider"></div>
 
-        <!-- ID -->
-        <p>
-          <input type="checkbox" class="filled-in" id="page-attr-id"/>
-          <label for="page-attr-id">id</label>
-        </p>
-        <!-- lastVisitTime -->
-        <p>
-          <input type="checkbox" class="filled-in" id="page-attr-last-visit-time"/>
-          <label for="page-attr-last-visit-time">lastVisitTime</label>
-        </p>
-        <!-- title -->
-        <p>
-          <input type="checkbox" class="filled-in" id="page-attr-title"/>
-          <label for="page-attr-title">title</label>
-        </p>
-        <!-- typedCount -->
-        <p>
-          <input type="checkbox" class="filled-in" id="page-attr-typed-count"/>
-          <label for="page-attr-typed-count">typedCount</label>
-        </p>
-        <!-- url -->
-        <p>
-          <input type="checkbox" class="filled-in" id="page-attr-url" checked="checked"/>
-          <label for="page-attr-url">url</label>
-        </p>
-        <!-- visitCount -->
-        <p>
-          <input type="checkbox" class="filled-in" id="page-attr-visit-count"/>
-          <label for="page-attr-visit-count">visitCount</label>
-        </p>
+        <!-- Text -->
+        <div style="padding-top:16px !important;" class="row">
+          <div class="input-field col s12">
+            <input id="query-text" type="text">
+            <label class="active" for="query-text">text</label>
+          </div>
+        </div>
 
-        <!-- pick a format -->
-        <div class="input-field col s12">
-        <select id="selected-format">
-          <option value="" disabled>Format</option>
-          <option value="0" selected>txt</option>
-          <option value="1">csv</option>
-          <option value="2">json</option>
-          <!-- <option value="3">xml</option> -->
-        </select>
+        <div class="row">
+          <!-- Start time -->
+          <div class="input-field col s6">
+            <input id="query-start-time"  type="text" class="datepicker">
+            <label class="active" for="query-start-time">startTime (optional)</label>
+          </div>
+          <!-- End time -->
+          <div class="input-field col s6">
+            <input id="query-end-time"  type="text" class="datepicker">
+            <label class="active" for="query-end-time">endTime (optional)</label>
+          </div>
+        </div>
+
+        <!-- Format -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="query-max-results" type="number">
+            <label class="active" for="query-max-results">maxResults (optional)</label>
+          </div>
+        </div>
       </div>
 
-      </form>
+      <div class="section">
+        <h5>Included Attributes</h5>
+        <div class="divider"></div>
+
+        <form style="padding-top:16px !important;" action="#">
+            <!-- All -->
+            <!-- <p>
+              <input type="checkbox" class="filled-in" id="page-attr-all"/>
+              <label for="page-attr-all">Page Attributes</label>
+            </p> -->
+
+            <!-- ID -->
+            <p>
+              <input type="checkbox" class="filled-in" id="page-attr-id"/>
+              <label for="page-attr-id">id</label>
+            </p>
+            <!-- lastVisitTime -->
+            <p>
+              <input type="checkbox" class="filled-in" id="page-attr-last-visit-time"/>
+              <label for="page-attr-last-visit-time">lastVisitTime</label>
+            </p>
+            <!-- title -->
+            <p>
+              <input type="checkbox" class="filled-in" id="page-attr-title"/>
+              <label for="page-attr-title">title</label>
+            </p>
+            <!-- typedCount -->
+            <p>
+              <input type="checkbox" class="filled-in" id="page-attr-typed-count"/>
+              <label for="page-attr-typed-count">typedCount</label>
+            </p>
+            <!-- url -->
+            <p>
+              <input type="checkbox" class="filled-in" id="page-attr-url" checked="checked"/>
+              <label for="page-attr-url">url</label>
+            </p>
+            <!-- visitCount -->
+            <p>
+              <input type="checkbox" class="filled-in" id="page-attr-visit-count"/>
+              <label for="page-attr-visit-count">visitCount</label>
+            </p>
+          </form>
+        </div>
+
+        <!-- pick a format -->
+        <div class="section">
+          <h5>Format</h5>
+          <div class="divider"></div>
+          <div style="padding-top:16px !important;" class="input-field col s12">
+            <select id="selected-format">
+              <option value="" disabled>Format</option>
+              <option value="0" selected>txt</option>
+              <option value="1">csv</option>
+              <option value="2">json</option>
+              <!-- <option value="3">xml</option> -->
+            </select>
+          </div>
+        </div>
+
 
 
       <a id="download-btn" class="waves-effect waves-light btn">Download</a>
