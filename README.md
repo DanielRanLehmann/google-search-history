@@ -10,9 +10,7 @@ $ git clone git@github.com:DanielRanLehmann/google-search-history.git
 ````
 2) Open Chrome and go to chrome://extensions
 
-3) Lastly, drag and drop the google-search-history folder into your extensions page and install it.
-
-4) Done!
+3) Lastly, drag and drop this repository into your extensions and install it.
 
 Usage
 ===============
@@ -32,9 +30,6 @@ You can also control what page attributes are included in your file:
 | Name | Type |
 | --- | --- |
 | id | string |
-| startTime | Limit results to those visited after this date, represented in milliseconds since the epoch. If not specified, this defaults to 24 hours in the past. |
-| endTime | Limit results to those visited before this date, represented in milliseconds since the epoch. |
-| maxResults | The maximum number of results to retrieve. Defaults to 100. |
 
 Why is this not a chrome extension app?
 ===============
