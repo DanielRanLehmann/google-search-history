@@ -29,7 +29,6 @@ Or you can optionally specify a couple of paramters:
 You can also control what page attributes are included in your file:
 | Name | Type |
 | --- | --- |
-| id | string |
 | git diff | Show file differences that haven't been staged |
 
 Why is this not a chrome extension app?
