@@ -1,5 +1,5 @@
 # google-search-history
-A chrome extension that helps you extract your google search history and download it in a variety of (raw) popular formats like: txt, csv and json. Visit, https://developer.chrome.com/extensions/history, for more information.
+A chrome extension that helps you extract your google search history and download it in a variety of popular formats like: txt, csv and json. Visit, https://developer.chrome.com/extensions/history, for more information.
 
 Installation
 ================
