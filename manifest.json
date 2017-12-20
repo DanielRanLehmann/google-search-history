@@ -1,12 +1,17 @@
 {
   "manifest_version": 2,
   "name": "Google Search History",
-   "description": "This extension helps you extract your google search history and download it in a variety of (raw) popular formats like: txt, csv and json. Visit, developer.chrome.com, for more information.",
-   "version": "0.1",
-   "browser_action": {
-     "default_popup": "popup.html"
-   },
-   "permissions": [
-        "history"
-    ]
+  "description": "This extension helps you extract your google search history and download it in a variety of popular formats like: txt, csv and json. Visit, developer.chrome.com, for more information.",
+  "version": "0.1",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "history"
+  ]
 }
