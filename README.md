@@ -31,7 +31,11 @@ You can also control what page attributes are included in your file:
 | Name | Type |
 | --- | --- |
 | id | string |
-| id | string |
+| lastVisitTime | double (epoch time) |
+| title | string |
+| typedCount | integer |
+| url | string |
+| visitCount | integer |
 
 Why is this not a chrome extension app?
 ===============
