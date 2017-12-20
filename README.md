@@ -16,7 +16,7 @@ Usage
 ===============
 Pick a format, txt by default, and click the Download button.
 
-Or you can optionally specify a couple of paramters: 
+Or you can optionally specify a couple of parameters: 
 (Note: Table extracted from: https://developer.chrome.com/extensions/history)
 
 | Parameter | Description | Type |
