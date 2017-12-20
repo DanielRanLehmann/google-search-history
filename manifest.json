@@ -1,0 +1,12 @@
+{
+ "manifest_version": 2,
+"name": "Google Search History",
+ "description": "This extension get's your google search history and makes it available for download in a variety of popular formats like: txt, json, xml, and csv",
+ "version": "1.0",
+ "browser_action": {
+    "default_popup": "popup.html"
+   },
+"permissions": [
+    "history"
+]
+}

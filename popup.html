@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Google Search History</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style type="text/css">
+      body {
+        min-width: 512px; /* your desired width */
+        max-width: 100%;
+        height:750px;
+        position: relative;
+        vertical-align:middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Google Search History</h3>
+      <p class="flow-text grey-text">Download your google search history in a variety of (raw) popular formats like: txt, json, xml, and csv.<br>
+        Visit, <a href="https://developer.chrome.com/extensions/history">developer.chrome.com</a>, for more information.
+      </p>
+
+      <!-- <p class="flow-text">Query</p> -->
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="query-text" type="text">
+          <label class="active" for="query-text">text</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Start time -->
+        <div class="input-field col s6">
+          <input id="query-start-time"  type="text" class="datepicker">
+          <label class="active" for="query-start-time">startTime (optional)</label>
+        </div>
+        <!-- End time -->
+        <div class="input-field col s6">
+          <input id="query-end-time"  type="text" class="datepicker">
+          <label class="active" for="query-end-time">endTime (optional)</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="query-max-results" type="number">
+          <label class="active" for="query-max-results">maxResults (optional)</label>
+        </div>
+      </div>
+
+
+      <form action="#">
+        <!-- All -->
+        <p>
+          <input type="checkbox" class="filled-in" id="page-attr-all"/>
+          <label for="page-attr-all">Page Attributes</label>
+        </p>
+
+        <div class="divider"></div>
+
+        <!-- ID -->
+        <p>
+          <input type="checkbox" class="filled-in" id="page-attr-id"/>
+          <label for="page-attr-id">id</label>
+        </p>
+        <!-- lastVisitTime -->
+        <p>
+          <input type="checkbox" class="filled-in" id="page-attr-last-visit-time"/>
+          <label for="page-attr-last-visit-time">lastVisitTime</label>
+        </p>
+        <!-- title -->
+        <p>
+          <input type="checkbox" class="filled-in" id="page-attr-title"/>
+          <label for="page-attr-title">title</label>
+        </p>
+        <!-- typedCount -->
+        <p>
+          <input type="checkbox" class="filled-in" id="page-attr-typed-count"/>
+          <label for="page-attr-typed-count">typedCount</label>
+        </p>
+        <!-- url -->
+        <p>
+          <input type="checkbox" class="filled-in" id="page-attr-url" checked="checked"/>
+          <label for="page-attr-url">url</label>
+        </p>
+        <!-- visitCount -->
+        <p>
+          <input type="checkbox" class="filled-in" id="page-attr-visit-count"/>
+          <label for="page-attr-visit-count">visitCount</label>
+        </p>
+
+        <!-- pick a format -->
+        <div class="input-field col s12">
+        <select id="selected-format">
+          <option value="" disabled>Format</option>
+          <option value="0" selected>txt</option>
+          <option value="1">csv</option>
+          <option value="2">json</option>
+          <!-- <option value="3">xml</option> -->
+        </select>
+      </div>
+
+      </form>
+
+
+      <a id="download-btn" class="waves-effect waves-light btn">Download</a>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/FileSaver.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
