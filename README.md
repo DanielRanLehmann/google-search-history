@@ -37,7 +37,7 @@ You can also control what page attributes are included in your file:
 | url | string |
 | visitCount | integer |
 
-Why is this not a chrome extension app?
+Why is this not in the Chrome Web Store?
 ===============
 For privacy reasons, and for the sake of complete transparency, you're highly encouraged to look through the code to get peace of mind in knowing that your search history **is not** mishandled, but that you have complete control over your data.
 
