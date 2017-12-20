@@ -27,9 +27,7 @@ Or you can optionally specify a couple of paramters:
 | maxResults | The maximum number of results to retrieve. Defaults to 100. | integer |
 
 You can also control what page attributes are included in your file:
-| Name | Type |
-| --- | --- |
-| id | string |
+
 
 Why is this not a chrome extension app?
 ===============
