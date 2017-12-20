@@ -28,13 +28,6 @@ Or you can optionally specify a couple of paramters:
 
 You can also control what page attributes are included in your file:
 
-| Parameter | Description | Type |
-| --- | --- | --- |
-| text | A free-text query to the history service. Leave empty to retrieve all pages. | string |
-| startTime | Limit results to those visited after this date, represented in milliseconds since the epoch. If not specified, this defaults to 24 hours in the past. | double (epoch time) |
-| endTime | Limit results to those visited before this date, represented in milliseconds since the epoch. | double (epoch time) |
-| maxResults | The maximum number of results to retrieve. Defaults to 100. | integer |
-
 | Name | Type |
 | --- | --- |
 | git diff | Show file differences that haven't been staged |
