@@ -16,55 +16,19 @@ $ git clone git@github.com:DanielRanLehmann/google-search-history.git
 
 Usage
 ===============
+Pick a format, txt by default, and click the Download button.
 
-Look at list available commands
-````
-$ app/console list
+Or you can optionally specify a couple of paramters: 
+(Note: Table extracted from: https://developer.chrome.com/extensions/history)
 
-...
-Available commands:
-    generate   Generate skeleton class for new command
-    help       Displays help for a command
-    list       Lists commands
-    test       Command test
-````
-
-Generate skeleton command class:
-````
-$ app/console generate
-````
-Write name of your command class in console dialog:
-
-`Please enter the name of the command class:` AcmeCommand
-
-Get the answer:
-````
-Generated new command class to "./cmd/src/Command/AcmeCommand.php"
-````
-Look at list available commands
-````
-$ app/console list
-
-...
-Available commands:
-    acme       Command acme
-    generate   Generate skeleton class for new command
-    help       Displays help for a command
-    list       Lists commands
-    test       Command test
-````
-
-Execute your command `acme`:
-
-````
-$ app/console acme
-Execute
-````
-Now you can change the logic of your command class on your own.
-
-If the name of your command class will be in CamelCase you get `camel:case` command.
+| Parameter | Description |
+| --- | --- |
+| text | A free-text query to the history service. Leave empty to retrieve all pages. |
+| startTime | Limit results to those visited after this date, represented in milliseconds since the epoch. If not specified, this defaults to 24 hours in the past. |
+| endTime | Limit results to those visited before this date, represented in milliseconds since the epoch. |
+| maxResults | The maximum number of results to retrieve. Defaults to 100. |
 
 Why is this not a chrome extension app?
 ===============
-For privacy reasons, and for the sake of complete transparency, you're highly encouraged to look through the code to get a peace of mind in knowing that your search history **is not** mishandled, but that you have complete control over your data.
+For privacy reasons, and for the sake of complete transparency, you're highly encouraged to look through the code to get peace of mind in knowing that your search history **is not** mishandled, but that you have complete control over your data.
 
