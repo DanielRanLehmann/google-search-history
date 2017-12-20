@@ -30,7 +30,8 @@ You can also control what page attributes are included in your file:
 
 | Name | Type |
 | --- | --- |
-| git diff | Show file differences that haven't been staged |
+| id | string |
+| id | string |
 
 Why is this not a chrome extension app?
 ===============
