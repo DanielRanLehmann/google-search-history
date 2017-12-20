@@ -10,16 +10,16 @@
       body {
         min-width: 512px; /* your desired width */
         max-width: 100%;
-        height:750px;
+        max-height: 100%;
         position: relative;
         vertical-align:middle;
       }
     </style>
   </head>
-  <body>
+  <body style="padding-bottom:24px !important;">
     <div class="container">
       <h3>Google Search History</h3>
-      <p class="flow-text grey-text">Download your google search history in a variety of (raw) popular formats like: txt, json, xml, and csv.<br>
+      <p class="flow-text grey-text">Download your google search history in a variety of (raw) popular formats like: txt, csv and json.<br>
         Visit, <a href="https://developer.chrome.com/extensions/history">developer.chrome.com</a>, for more information.
       </p>
 
@@ -113,6 +113,7 @@
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/FileSaver.min.js"></script>
+    <script type="text/javascript" src="js/papaparse.min.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>

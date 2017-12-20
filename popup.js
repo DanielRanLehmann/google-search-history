@@ -108,53 +108,42 @@ function getQuery() {
 
 // doc: section: search -> https://developer.chrome.com/extensions/history
 function download(filename, includeAttrs, query, format) {
-  chrome.history.search(query, function(data) {
+  chrome.history.search(query, function(pages) {
 
-    var txtData = "";
-    var csvData = [];
-    csvData.push(includeAttrs);
-    var jsonData = [];
-    data.forEach(function(page) {
-      //if (format === "json") {
-      let obj = {};
-      let obj_csv = [];
-      for (i = 0; i < includeAttrs.length; i++) {
-        let attr = includeAttrs[i];
-        if (page[attr] != undefined) {
-          obj[attr] = page[attr];
-          txtData = txtData.concat(page[attr] + "\n");
-          obj_csv.push(page[attr]);
-        } else {
-          obj_csv.push("");
+    var textContent = "";
+    var data = [];
+    pages.forEach(function(page) {
+      if (format == "json" || format == "csv") {
+        let obj = {};
+        for (i = 0; i < includeAttrs.length; i++) {
+          let attr = includeAttrs[i];
+          if (page[attr] != undefined) {
+            obj[attr] = page[attr];
+          }
         }
+        data.push(obj);
+      } else {
+        // how to handled, basic plain text?
+        textContent = textContent.concat(page["url"] + "\n");
       }
-      jsonData.push(obj);
-      csvData.push(obj_csv);
-      //}
     });
 
     // using filesaver. look for it on github.
     if (format == "txt") {
-      var blob = new Blob([txtData], {type: "text/plain"});
+      var blob = new Blob([textContent], {type: "text/plain"});
       var saveAs = window.saveAs;
       saveAs(blob, filename + ".txt");
     }
 
     else if (format == "csv") {
-      const rows = csvData; //[["name1", "city1", "some other info"], ["name2", "city2", "more info"]];
-      let csvContent = ""; //"data:text/csv;charset=utf-8,";
-      rows.forEach(function(rowArray){
-         let row = rowArray.join(",");
-         csvContent += row + "\r\n"; // add carriage return
-      });
-
-      var blob = new Blob([csvContent], {type: "application/csv"});
+      var csv = Papa.unparse(data);
+      var blob = new Blob([csv], {type: "application/csv"});
       var saveAs = window.saveAs;
       saveAs(blob, filename + ".csv");
     }
 
     else if (format == "json") {
-      var json = JSON.stringify(jsonData, null, 2);
+      var json = JSON.stringify(data, null, 2);
       var blob = new Blob([json], {type: "application/json"});
       var saveAs = window.saveAs;
       saveAs(blob, filename + ".json");
