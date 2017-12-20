@@ -8,7 +8,7 @@ Installation
 ````
 $ git clone git@github.com:DanielRanLehmann/google-search-history.git
 ````
-2) Open Chrome and go to [your extension](chrome://extensions):
+2) Open Chrome and go to chrome://extensions
 
 3) Lastly, drag and drop the google-search-history folder into your extensions page and install it.
 
